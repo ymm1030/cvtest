@@ -12,7 +12,7 @@ def findTemplate(img, temp, method):
 
 if __name__ == '__main__':
     img = cv2.imread('contact_info.png')
-    temp = cv2.imread('template.png')
+    temp = cv2.imread('template_scaled.png')
     top_left, bottom_right = findTemplate(img, temp, cv2.TM_SQDIFF)
     cv2.rectangle(img, top_left, bottom_right, (0, 0, 255), 5)
     cv2.namedWindow('object_detection', cv2.WINDOW_NORMAL)
